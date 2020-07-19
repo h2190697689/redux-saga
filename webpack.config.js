@@ -43,7 +43,7 @@ module.exports = {
         contentBase: path.resolve(__dirname,"./public"),
         port: 3006,
         hot: true,
-        host: "192.168.131.87",
+        // host: "192.168.131.87",
         proxy: {
             "api": {
                 target: "http://192.168.131.87:3009",

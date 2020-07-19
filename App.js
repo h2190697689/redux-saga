@@ -28,12 +28,24 @@ class App extends React.Component{
         // dispatch(Actions.getName(["我是隐形"]))
     }
 
+    startSaga=()=>{
+        const {dispatch} = this.props;
+        dispatch(Actions.getOk())
+    }
+
+    getError=()=>{
+        const {dispatch} = this.props;
+        dispatch(Actions.getError());
+    }
+
      render(){
          return(
             <Fragment>
                 <h1 onClick={this.changeAge}>react hello {this.props.appName}</h1>
                 <p onClick={this.changeName}>改变名称</p>
                 <Children age={this.state.age}/>
+                <div onClick={this.startSaga}>sagas</div>
+                <div onClick={this.getError}>Error</div>
             </Fragment>
          )
      }
